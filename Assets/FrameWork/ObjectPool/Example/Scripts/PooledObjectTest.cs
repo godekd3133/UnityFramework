@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
@@ -8,6 +9,7 @@ public class PooledObjectTest : MonoBehaviour
 {
     void Awake()
     {
+
         Debug.Log($"Created New PooledObject {gameObject.name}");
     }
 
@@ -23,7 +25,7 @@ public class PooledObjectTest : MonoBehaviour
 
     public async Task DestroyTimer(float duration)
     {
-        await UniTask.Delay((int)(duration * 1000f));
+        await UniTask.Delay(TimeSpan.FromMilliseconds((duration * 1000f)));
         GetComponent<PooledObject>().Dispose();
     }
 }

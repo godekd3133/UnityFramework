@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   createKey: 97
-  initializeSize: 20
+  initializeSize: 10
   lifeDuraction: 5
   prefab: {fileID: 4893659387607944577, guid: 1eb5d1235664848bc9dd408fe422f87e, type: 3}
 --- !u!4 &566885981

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PooledObject : MonoBehaviour
 {
-    public ObjectPool ManagedPool { get; private set; }
+    public ObjectPool ManagedPool;
 
     public void Dispose()
     {

@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.UI;
 using UnityEngine;
 
 public class ObjectPoolTest : MonoBehaviour
@@ -16,13 +15,16 @@ public class ObjectPoolTest : MonoBehaviour
         objectPool = gameObject.AddComponent<ObjectPool>();
         objectPool.pooledObjectPrefab = this.prefab;
         objectPool.initalizeSize = this.initializeSize;
+
     }
 
     void Update()
     {
         if (Input.GetKeyDown(createKey))
         {
+
             objectPool.RequestObject().GetComponent<PooledObjectTest>().DestroyTimer(lifeDuraction);
+
         }
     }
 }
